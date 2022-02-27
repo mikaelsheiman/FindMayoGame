@@ -21,12 +21,13 @@ public class HandMotor : MonoBehaviour
     void Update()
     {
         //Debug.Log(GetMotionVector());
+        rb.velocity = GetMotionVector();
     }
 
     void FixedUpdate()
     {
         //transform.Translate(GetMotionVector());
-        rb.velocity = GetMotionVector();
+        
     }
 
     private void OnCollisionStay(Collision collision)
